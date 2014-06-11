@@ -80,7 +80,8 @@
     <tr>
      <td><a href="http://93.123.23.57" target="_blank">93.123.23.57</a></td>
      <td><a href="http://93.123.23.58" target="_blank">93.123.23.58</a></td>
-     <td colspan="5"><a href="http://93.123.23.59" target="_blank">93.123.23.59</a></td>
+     <td><a href="http://93.123.23.59" target="_blank">93.123.23.59</a></td>
+     <td colspan="4"></td>
     </tr>
    </tbody>
   </table>
