@@ -1,6 +1,6 @@
 ## Google 全球 IP 地址库
 
-  <table  class="table table-bordered table-striped table-condensed">
+  <table>
    <tbody>
     <tr>
      <td style="font-weight:bold; color:red">Bulgaria</td>
