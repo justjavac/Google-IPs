@@ -1,6 +1,6 @@
 ## Google 全球 IP 地址库
 
-IP 地址来源：http://www.kookle.co.nr/
+IP 地址来源：<a href="http://www.kookle.co.nr" target="_blank">http://www.kookle.co.nr</a>
 
 <table>
  <tbody>
