@@ -1,5 +1,7 @@
 ## Google 全球 IP 地址库
 
+IP 地址来源：http://www.kookle.co.nr/
+
 <table>
  <tbody>
   <tr>
