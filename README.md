@@ -2,6 +2,7 @@
 
 =====>> [宽屏查看](./README.md) <<=====
 
+微博: [@justjavac](http://weibo.com/justjavac)
 
 <table>
  <tbody>
