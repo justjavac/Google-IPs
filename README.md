@@ -1,6 +1,6 @@
 ## Google 全球 IP 地址库
 
-[宽屏查看](./README.md)
+=====>> [宽屏查看](./README.md) <<=====
 
 
 <table>
