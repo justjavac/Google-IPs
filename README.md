@@ -2,7 +2,9 @@
 
 =====>> [宽屏查看](./README.md) <<=====
 
-微博: [@justjavac](http://weibo.com/justjavac)
+我的微博: [@justjavac](http://weibo.com/justjavac)
+
+如果想更方便的上网，可以试试我朋友开发的插件**红杏**：<http://honx.in/i/U60xt4Ko1yN2OjOD>
 
 <table>
  <tbody>
