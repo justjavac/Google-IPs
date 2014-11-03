@@ -4,6 +4,12 @@
 
 我的微博: [@justjavac](http://weibo.com/justjavac)
 
+很多网站，尤其是国外网站，为了加快网站的速度，都是用了 Google 的 CDN。 但是在天朝，由于某些原因，导致全球最快的 CDN 变成了全球最慢的。
+
+于是，我写了这个插件，将 Google 的 CDN 替换成国内的。
+
+https://github.com/justjavac/ReplaceGoogleCDN
+
 <table>
  <tbody>
   <tr>
