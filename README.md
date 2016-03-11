@@ -10,6 +10,10 @@
 
 https://github.com/justjavac/ReplaceGoogleCDN
 
+欢迎订阅我的微信公众帐号，只推送原创文字。欢迎扫描二维码订阅：
+
+![justjavac微信公众帐号](http://justjavac.com/assets/images/weixin-justjavac.jpg)
+
 <table>
  <tbody>
   <tr>
