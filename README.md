@@ -2,17 +2,16 @@
 
 =====>> [宽屏查看](./README.md) <<=====
 
-我的微博: [@justjavac](http://weibo.com/justjavac)
-
-很多网站，尤其是国外网站，为了加快网站的速度，都是用了 Google 的 CDN。 但是在天朝，由于某些原因，导致全球最快的 CDN 变成了全球最慢的。
+很多网站，尤其是国外网站，为了加快网站的速度，都是用了 Google 的 CDN。
+但是在天朝，由于某些原因，导致全球最快的 CDN 变成了全球最慢的。
 
 于是，我写了这个插件，将 Google 的 CDN 替换成国内的。
 
 https://github.com/justjavac/ReplaceGoogleCDN
 
-欢迎订阅我的微信公众帐号，只推送原创文字。欢迎扫描二维码订阅：
+如果我的工作对你有所帮助，可以请我喝杯咖啡：
 
-![justjavac微信公众帐号](http://justjavac.com/assets/images/weixin-justjavac.jpg)
+<p align="center"><img src="./buy-me-a-coffee-wechat.png" width="320" height="320" alt="" /></p>
 
 <table>
  <tbody>
