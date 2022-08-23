@@ -9,10 +9,6 @@
 
 https://github.com/justjavac/ReplaceGoogleCDN
 
-如果我的工作对你有所帮助，可以请我喝杯咖啡：
-
-<p align="center"><img src="https://cdn.devtips.cn/buy-me-a-coffee-wechat.png" width="320" height="320" alt="" /></p>
-
 <table>
  <tbody>
   <tr>
