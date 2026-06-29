@@ -18,25 +18,32 @@
     "cdn"
   ],
   "type": "commonjs",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.d.ts",
-      "require": "./src/index.js",
-      "default": "./src/index.js"
+      "types": "./dist/src/index.d.ts",
+      "require": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
     },
-    "./data": "./data/google-ips.json",
+    "./data": "./dist/data/google-ips.json",
     "./package.json": "./package.json"
   },
   "files": [
-    "data",
-    "src",
+    "dist/src",
+    "dist/data",
     "README.md"
   ],
   "scripts": {
-    "build": "node scripts/generate-data.js",
-    "test": "node --test"
+    "build": "npm run generate-data && tsc -p tsconfig.json",
+    "generate-data": "tsc -p tsconfig.scripts.json && node dist-scripts/scripts/generate-data.js",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test dist/test/index.test.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=16"
