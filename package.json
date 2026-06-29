@@ -1,0 +1,44 @@
+{
+  "name": "google-ips",
+  "version": "1.0.0",
+  "description": "Google global IP address list grouped by country.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justjavac/Google-IPs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justjavac/Google-IPs/issues"
+  },
+  "homepage": "https://github.com/justjavac/Google-IPs#readme",
+  "keywords": [
+    "google",
+    "ips",
+    "ip",
+    "cdn"
+  ],
+  "type": "commonjs",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./data": "./data/google-ips.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "data",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/generate-data.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
