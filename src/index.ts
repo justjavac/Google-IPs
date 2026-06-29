@@ -28,11 +28,11 @@ export function getByCountry(country: string): readonly string[] {
   return byCountry[country] ?? emptyIps;
 }
 
-export function has(ip: string): boolean {
+export function has(ip: unknown): boolean {
   return typeof ip === "string" && ipToCountry.has(ip);
 }
 
-export function findCountry(ip: string): string | undefined {
+export function findCountry(ip: unknown): string | undefined {
   if (typeof ip !== "string") {
     return undefined;
   }
