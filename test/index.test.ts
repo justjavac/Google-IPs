@@ -7,6 +7,7 @@ import {
   getByCountry,
   has,
   ips,
+  random,
 } from "../src";
 
 test("exports the generated IP list", () => {
@@ -29,8 +30,23 @@ test("groups IPs by country", () => {
 test("looks up IP membership and country", () => {
   assert.equal(has("93.123.23.1"), true);
   assert.equal(has("127.0.0.1"), false);
+  assert.equal(has(127001), false);
   assert.equal(findCountry("118.174.25.251"), "Thailand");
   assert.equal(findCountry("127.0.0.1"), undefined);
+  assert.equal(findCountry(null), undefined);
+});
+
+test("returns random IPs from all data or a country", () => {
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    assert.equal(random(), "93.123.23.1");
+    assert.equal(random("Bulgaria"), "93.123.23.1");
+    assert.equal(random("Unknown"), undefined);
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test("returns immutable data", () => {
@@ -39,5 +55,11 @@ test("returns immutable data", () => {
   }, TypeError);
   assert.throws(() => {
     (byCountry.Bulgaria as string[]).push("127.0.0.1");
+  }, TypeError);
+});
+
+test("validates country input", () => {
+  assert.throws(() => {
+    getByCountry(123 as unknown as string);
   }, TypeError);
 });
