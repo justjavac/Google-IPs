@@ -9,6 +9,28 @@
 
 https://github.com/justjavac/ReplaceGoogleCDN
 
+## npm package
+
+```sh
+npm install google-ips
+```
+
+```js
+const googleIps = require("google-ips");
+
+console.log(googleIps.ips.length);
+console.log(googleIps.countries);
+console.log(googleIps.getByCountry("Hong Kong"));
+console.log(googleIps.has("93.123.23.1"));
+console.log(googleIps.findCountry("118.174.25.251"));
+```
+
+You can also import the generated JSON data directly:
+
+```js
+const data = require("google-ips/data");
+```
+
 <table>
  <tbody>
   <tr>
