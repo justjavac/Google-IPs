@@ -35,7 +35,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm run generate-data && tsc -p tsconfig.json",
+    "clean": "node -e \"const fs = require('node:fs'); for (const path of ['dist', 'dist-scripts']) fs.rmSync(path, { recursive: true, force: true });\"",
+    "build": "npm run clean && npm run generate-data && tsc -p tsconfig.json",
     "generate-data": "tsc -p tsconfig.scripts.json && node dist-scripts/scripts/generate-data.js",
     "prepack": "npm run build",
     "test": "npm run build && node --test dist/test/index.test.js",
