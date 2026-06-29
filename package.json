@@ -1,0 +1,51 @@
+{
+  "name": "google-ips",
+  "version": "1.0.0",
+  "description": "Google global IP address list grouped by country.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justjavac/Google-IPs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justjavac/Google-IPs/issues"
+  },
+  "homepage": "https://github.com/justjavac/Google-IPs#readme",
+  "keywords": [
+    "google",
+    "ips",
+    "ip",
+    "cdn"
+  ],
+  "type": "commonjs",
+  "main": "dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "require": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
+    },
+    "./data": "./dist/data/google-ips.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/src",
+    "dist/data",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run generate-data && tsc -p tsconfig.json",
+    "generate-data": "tsc -p tsconfig.scripts.json && node dist-scripts/scripts/generate-data.js",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test dist/test/index.test.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
