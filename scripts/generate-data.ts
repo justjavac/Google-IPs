@@ -7,7 +7,7 @@ interface GoogleIpsData {
   byCountry: Record<string, string[]>;
 }
 
-const root = process.cwd();
+const root = path.resolve(__dirname, "..", "..");
 const readmePath = path.join(root, "README.md");
 const outputPath = path.join(root, "data", "google-ips.json");
 
@@ -17,6 +17,7 @@ const byCountry: Record<string, string[]> = {};
 const countries: string[] = [];
 const ips: string[] = [];
 const ipSet = new Set<string>();
+const countryIpSets = new Map<string, Set<string>>();
 
 for (const block of countryBlocks) {
   const countryMatch = block.match(/^([^<]+)<\/th>/i);
@@ -25,8 +26,14 @@ for (const block of countryBlocks) {
   }
 
   const country = decodeHtml(countryMatch[1].trim());
-  if (!byCountry[country]) {
-    byCountry[country] = [];
+  let countryIps = byCountry[country];
+  let countryIpSet = countryIpSets.get(country);
+
+  if (!countryIps || !countryIpSet) {
+    countryIps = [];
+    countryIpSet = new Set<string>();
+    byCountry[country] = countryIps;
+    countryIpSets.set(country, countryIpSet);
     countries.push(country);
   }
 
@@ -39,8 +46,9 @@ for (const block of countryBlocks) {
     const ip = match[1];
     assertIpv4(ip);
 
-    if (!byCountry[country].includes(ip)) {
-      byCountry[country].push(ip);
+    if (!countryIpSet.has(ip)) {
+      countryIpSet.add(ip);
+      countryIps.push(ip);
     }
 
     if (!ipSet.has(ip)) {
