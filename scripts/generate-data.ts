@@ -67,8 +67,8 @@ const data: GoogleIpsData = { countries, ips, byCountry };
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(data, null, 2)}\n`);
 
-console.log(`Generated ${outputPath}`);
-console.log(`${ips.length} IPs across ${countries.length} countries`);
+console.error(`Generated ${outputPath}`);
+console.error(`${ips.length} IPs across ${countries.length} countries`);
 
 function assertIpv4(ip: string): void {
   const octets = ip.split(".").map(Number);
